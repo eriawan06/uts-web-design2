@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/font/Roboto-Regular.ttf') format('truetype'),
+         url('assets/font/Roboto-Bold.ttf') format('truetype'),
+         url('assets/font/Roboto-Medium.ttf') format('truetype'),
+}
+
+*{ 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+body{ 
+    background-color: #F6F8F8; 
+}
+
+a{ text-decoration: none; }
+
+#app{ 
+    width: 100%; 
+    position: relative; 
+    top: 0; 
+    left: 0; 
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-custom {
+    padding: 10px 0;
+    background-color: #4EA060;
+}
+
+.navbar-custom a{ color: white; }
+
+.navbar-custom .navbar-collapse{
+    justify-content: space-between;
+}
+
+/* .logo{
+    width: 65px;
+    height: 65px;
+} */
+
+.navbar-custom #ordernav {
+    color: white;
+    padding: 8px 20px;
+    margin-left: 15px;
+}
+
+#feature img, #testimoni img{
+    width: 100px;
+    height: 100px;
+}
+
+.section-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-title a{ color: #4EA060; }
+
+#flash-deals{
+    background-color: #4EA060;
+    padding: 70px 0;
+}
+
+#fd-text{ color: white; }
+
+footer{ 
+    background-color: #4EA060; 
+    color: white;
+    padding: 70px 0;
+}
+
+footer a, footer p{ 
+    display: block; 
+    color: #F6F8F8;
+    margin-bottom: 5px;
+}
+
+.mt-65 { margin-top: 65px; }
+.mb-70 { margin-top: 70px; }
