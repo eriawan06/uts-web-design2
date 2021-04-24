@@ -32,10 +32,10 @@ a{ text-decoration: none; }
 
 .navbar-custom {
     padding: 10px 0;
-    background-color: #4EA060;
+    background-color: white;
 }
 
-.navbar-custom a{ color: white; }
+.navbar-custom a{ color: #515C60; }
 
 .navbar-custom .navbar-collapse{
     justify-content: space-between;
@@ -63,17 +63,17 @@ a{ text-decoration: none; }
     justify-content: space-between;
 }
 
-.section-title a{ color: #4EA060; }
+.section-title a{ color: #A9BF04; }
 
 #flash-deals{
-    background-color: #4EA060;
+    background-color: #43527D;
     padding: 70px 0;
 }
 
 #fd-text{ color: white; }
 
 footer{ 
-    background-color: #4EA060; 
+    background-color: #515C60; 
     color: white;
     padding: 70px 0;
 }
