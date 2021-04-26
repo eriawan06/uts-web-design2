@@ -84,6 +84,38 @@ footer a, footer p{
     margin-bottom: 5px;
 }
 
+.card-img-top{
+    width: 100%;
+    height: auto;
+}
+
+.filter-container{
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0.5px 2px -0.5px rgba(0,0,0,0.2);
+}
+
+.filter-group{ 
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px 15px; 
+}
+
+.filter-price-group{ 
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 20px; 
+}
+
+.filter-price-label{ font-size: 16px; }
+
+.price-slider{ margin-top: 5px; }
+
+.filter-price-tag{ 
+    font-weight: bold; 
+    padding: 5px; 
+}
+
 .mt-65 { margin-top: 65px; }
 .mt-100 { margin-top: 100px; }
 .mb-70 { margin-top: 70px; }
