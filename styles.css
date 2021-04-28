@@ -16,7 +16,10 @@ body{
     background-color: #F6F8F8; 
 }
 
-a{ text-decoration: none; }
+a{ 
+    text-decoration: none;
+    cursor: pointer; 
+}
 
 #app{ 
     width: 100%; 

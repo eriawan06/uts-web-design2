@@ -9,6 +9,11 @@ export const AppHeader = {
           }
       }
   },
+  methods: {
+    goToPage(route) {
+      this.$emit('update-route', route);
+    }
+  },
   template: `
   <nav class="navbar fixed-top navbar-expand-md shadow navbar-custom">
     <div class="wrapper d-flex flex-row justify-content-between">
@@ -23,7 +28,7 @@ export const AppHeader = {
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" v-for="(value,key) in navLinks">
-            <a class="nav-link" :href="key">{{value}}</a>
+            <a class="nav-link" @click="goToPage(key)">{{value}}</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
