@@ -7,7 +7,7 @@ export const AppHeader = {
       navLinks: {
           '/': 'Home',
           '/brand': 'Brand',
-          '/products': 'Products'
+          '/products': 'Products',
       }
     }
   },
