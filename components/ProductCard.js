@@ -1,5 +1,6 @@
 import { FetchDataMixin } from '../mixins/FetchDataMixin.js';
 import { FormatCurrencyMixin } from '../mixins/FormatCurrencyMixin.js';
+import { NavigationMixin } from '../mixins/NavigationMixin.js';
 
 
 export const ProductCard = {
