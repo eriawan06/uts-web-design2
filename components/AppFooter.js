@@ -1,17 +1,19 @@
+import { NavigationMixin } from "../mixins/NavigationMixin.js";
+
 export const AppFooter = {
-    name: 'AppFooter',
+    mixins: [NavigationMixin],
     data() {
         return {
             footerLinks: {
                 'Support': {
-                    '/contact': 'Contact Us',
-                    '/technical-support': 'Technical Support',
-                    '/privacy': 'Privacy Policy',
-                    '/faqs': 'FAQs',
+                    '#contact': 'Contact Us',
+                    '#technical-support': 'Technical Support',
+                    '#privacy': 'Privacy Policy',
+                    '#faqs': 'FAQs',
                 },
                 'Quick Links': {
                     '/': 'Home',
-                    '/brands': 'Brands',
+                    '/brand': 'Brand',
                     '/products': 'Products',
                 },
                 'Social': {
@@ -34,7 +36,8 @@ export const AppFooter = {
                 <div class="col-lg-2 pl-4 pr-4" v-for="(value,key) in footerLinks">
                     <h5 class="font-weight-bold mb-3">{{key}}</h5>
                     <template v-for="(linkName, linkRef) in value">
-                        <a :href="linkRef">{{linkName}}</a>
+                        <a @click="goToPage(linkRef)" v-if="key=='Quick Links'">{{linkName}}</a>
+                        <a :href="linkRef" v-else>{{linkName}}</a>
                     </template>
                 </div>
             </div>

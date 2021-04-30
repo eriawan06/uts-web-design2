@@ -12,9 +12,10 @@
       <app-header @update-route="updateCurrentRoute"></app-header>
 
       <home-page v-if="currenRoute=='/'"></home-page>
+      <brand-page v-else-if="currenRoute=='/brand'"></brand-page>
       <products-page v-else-if="currenRoute=='/products'"></products-page>
 
-      <app-footer></app-footer>
+      <app-footer @update-route="updateCurrentRoute"></app-footer>
     </div>
 
     <script src="vue.js"></script>
@@ -29,7 +30,8 @@
       import { AppHeader } from '../components/AppHeader.js';
       import { AppFooter } from '../components/AppFooter.js';
       import { HomePage } from './pages/HomePage.js';
-      import { ProductsPage } from './pages/ProductsPage.js'
+      import { ProductsPage } from './pages/ProductsPage.js';
+      import { BrandPage } from './pages/BrandPage.js';
 
       var vm = new Vue({
         el: '#app',
@@ -38,6 +40,7 @@
           'AppFooter': AppFooter,
           'HomePage': HomePage,
           'ProductsPage': ProductsPage,
+          'BrandPage': BrandPage,
         },
         data: {
           currenRoute: window.location.pathname

@@ -1,0 +1,335 @@
+[
+    {
+        "id": 1,
+        "image": "/products/ProArt-StudioBook-Pro-X-W730.png",
+        "name": "ProArt StudioBook Pro X W730",
+        "price": 77988000,
+        "label": "featured",
+        "use": ["home","work","creators"],
+        "series": "ProArt StudioBook"
+    },
+    {
+        "id": 2,
+        "image": "/products/ProArt-StudioBook-Pro-17-W700.png",
+        "name": "ProArt StudioBook Pro 17 W700",
+        "price": 55000000,
+        "label": "popular",
+        "use": ["home","work","creators"],
+        "series": "ProArt StudioBook"
+    },
+    {
+        "id": 3,
+        "image": "/products/ProArt-StudioBook-Pro-15-W500.png",
+        "name": "ProArt StudioBook Pro 15 W500",
+        "price": 77988000,
+        "label": "",
+        "use": ["home","work","creators"],
+        "series": "ProArt StudioBook"
+    },
+    {
+        "id": 4,
+        "image": "/products/ProArt-StudioBook-15-H500.png",
+        "name": "ProArt StudioBook 15 H500",
+        "price": 26400000,
+        "label": "",
+        "use": ["home","work","creators"],
+        "series": "ProArt StudioBook"
+    },
+    {
+        "id": 5,
+        "image": "/products/ZenBook-Pro-Duo-UX581.png",
+        "name": "ZenBook Pro Duo UX581",
+        "price": 42999000,
+        "label": "",
+        "use": ["home","work","creators"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 6,
+        "image": "/products/ZenBook-S-UX393-(11th-Gen-Intel).png",
+        "name": "ZenBook S UX393 (11th Gen Intel)",
+        "price": 24545790,
+        "label": "",
+        "use": ["home","work"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 7,
+        "image": "/products/ASUS-ZenBook-S13-UX392.png",
+        "name": "ASUS ZenBook S13 UX392",
+        "price": 17549000,
+        "label": "popular",
+        "use": ["home"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 8,
+        "image": "/products/ZenBook-13-OLED-(UX325,-11th-Gen-Intel).png",
+        "name": "ZenBook 13 OLED (UX325, 11th Gen Intel)",
+        "price": 17799000,
+        "label": "",
+        "use": ["home","work"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 9,
+        "image": "/products/ZenBook-Duo-14-(UX482).png",
+        "name": "ZenBook Duo 14 (UX482)",
+        "price": 18299000,
+        "label": "featured",
+        "use": ["home","work","creators"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 10,
+        "image": "/products/ZenBook-14-UX434.png",
+        "name": "ZenBook 14 UX434",
+        "price": 15299000,
+        "label": "popular",
+        "use": ["home","work"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 11,
+        "image": "/products/ZenBook-Flip-S-UX371-(11th-Gen-Intel).png",
+        "name": "ZenBook Flip S UX371 (11th Gen Intel)",
+        "price": 24999000,
+        "label": "",
+        "use": ["home","work"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 12,
+        "image": "/products/ASUS-ZenBook-Flip-14-UX461.png",
+        "name": "ASUS ZenBook Flip 14 UX461",
+        "price": 15299000,
+        "label": "",
+        "use": ["home","work"],
+        "series": "ZenBook"
+    },
+    {
+        "id": 13,
+        "image": "/products/VivoBook-S13-S333.png",
+        "name": "VivoBook S13 S333",
+        "price": 12799000,
+        "label": "featured",
+        "use": ["home","students"],
+        "series": "VivoBook"
+    },
+    {
+        "id": 14,
+        "image": "/products/ASUS-VivoBook-S14-M433IA.png",
+        "name": "ASUS VivoBook S14 M433IA",
+        "price": 10799000,
+        "label": "popular",
+        "use": ["home","students"],
+        "series": "VivoBook"
+    },
+    {
+        "id": 15,
+        "image": "/products/VivoBook-Flip-14-TP470.png",
+        "name": "VivoBook Flip 14 TP470",
+        "price": 16299000,
+        "label": "",
+        "use": ["home","students"],
+        "series": "VivoBook"
+    },
+    {
+        "id": 16,
+        "image": "/products/ASUS-Chromebook-Flip-C434.png",
+        "name": "ASUS Chromebook Flip C434",
+        "price": 12090000,
+        "label": "",
+        "use": ["home","work","students"],
+        "series": "Chromebook"
+    },
+    {
+        "id": 17,
+        "image": "/products/ASUS-Chromebook-C204.png",
+        "name": "ASUS Chromebook C204",
+        "price": 4899000,
+        "label": "",
+        "use": ["home","students"],
+        "series": "Chromebook"
+    },
+    {
+        "id": 18,
+        "image": "/products/ASUS-E410.png",
+        "name": "ASUS E410",
+        "price": 4699000,
+        "label": "",
+        "use": ["home","students"],
+        "series": "Everyday use"
+    },
+    {
+        "id": 19,
+        "image": "/products/ASUS-Laptop-14-A416.png",
+        "name": "ASUS Laptop 14 A416",
+        "price": 6699000,
+        "label": "",
+        "use": ["home"],
+        "series": "Everyday use"
+    },
+    {
+        "id": 20,
+        "image": "/products/ASUS-A409.png",
+        "name": "ASUS A409",
+        "price": 4399000,
+        "label": "",
+        "use": ["home"],
+        "series": "Everyday use"
+    },
+    {
+        "id": 21,
+        "image": "/products/ExpertBook-B9-(B9400).png",
+        "name": "ExpertBook B9 (B9400)",
+        "price": 31999000,
+        "label": "",
+        "use": ["work"],
+        "series": "ExpertBook"
+    },
+    {
+        "id": 22,
+        "image": "/products/ExpertBook-P2-P2451.png",
+        "name": "ExpertBook P2 P2451",
+        "price": 9599000,
+        "label": "",
+        "use": ["work"],
+        "series": "ExpertBook"
+    },
+    {
+        "id": 23,
+        "image": "/products/ASUS-ExpertBook-B9-B9450.png",
+        "name": "ASUS ExpertBook B9 B9450",
+        "price": 32499000,
+        "label": "popular",
+        "use": ["work"],
+        "series": "ExpertBook"
+    },
+    {
+        "id": 24,
+        "image": "/products/ASUS-TUF-Gaming-FX505GT.png",
+        "name": "ASUS TUF Gaming FX505GT",
+        "price": 12229000,
+        "label": "",
+        "use": ["students","gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 25,
+        "image": "/products/ASUS-TUF-Gaming-F15.png",
+        "name": "ASUS TUF Gaming F15",
+        "price": 13299000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 26,
+        "image": "/products/2021-ASUS-TUF-Dash-F15.png",
+        "name": "2021 ASUS TUF Dash F15",
+        "price": 30099000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 27,
+        "image": "/products/2021-ASUS-TUF-Gaming-A15.png",
+        "name": "2021 ASUS TUF Gaming A15",
+        "price": 22599000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 28,
+        "image": "/products/ASUS-TUF-Gaming-A15.png",
+        "name": "ASUS TUF Gaming A15",
+        "price": 14299000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 29,
+        "image": "/products/ASUS-TUF-Gaming-FX505DD-DT-DU.png",
+        "name": "ASUS TUF Gaming FX505DD/DT/DU",
+        "price": 11799000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "TUF Gaming"
+    },
+    {
+        "id": 30,
+        "image": "/products/ROG-Zephyrus-Duo-15-SE-GX551QS-R938E6T-O.png",
+        "name": "ROG Zephyrus Duo 15 SE GX551QS-R938E6T-O",
+        "price": 72500000,
+        "label": "featured",
+        "use": ["creators","gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 31,
+        "image": "/products/ROG-Zephyrus-Duo-15-SE-GX551QR-R937D6T-O.png",
+        "name": "ROG Zephyrus Duo 15 SE GX551QR-R937D6T-O",
+        "price": 75500000,
+        "label": "",
+        "use": ["creators","gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 32,
+        "image": "/products/GX551QM-GX551QM-R736D6T-O.png",
+        "name": "GX551QM GX551QM-R736D6T-O",
+        "price": 34499000,
+        "label": "featured",
+        "use": ["creators","gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 33,
+        "image": "/products/ROG-Zephyrus-Duo-15-GX550LXS-I98SE8T.png",
+        "name": "ROG Zephyrus Duo 15 GX550LXS-I98SE8T",
+        "price": 64999000,
+        "label": "",
+        "use": ["creators","gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 34,
+        "image": "/products/ROG-Zephyrus-Duo-15-GX550LWS-I77SE8T.png",
+        "name": "ROG Zephyrus Duo 15 GX550LWS-I77SE8T",
+        "price": 70750000,
+        "label": "",
+        "use": ["creators","gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 35,
+        "image": "/products/G713QM-G713QM-R736D6T-O.png",
+        "name": "G713QM G713QM-R736D6T-O",
+        "price": 30999000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 36,
+        "image": "/products/ROG-Strix-SCAR-17-G733QS-R938D6T-O.png",
+        "name": "ROG Strix SCAR 17 G733QS-R938D6T-O",
+        "price": 61639000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "ROG"
+    },
+    {
+        "id": 37,
+        "image": "/products/ROG-Strix-G17-G712LU-I766B6T.png",
+        "name": "ROG Strix G17 G712LU-I766B6T",
+        "price": 22499000,
+        "label": "",
+        "use": ["gaming"],
+        "series": "ROG"
+    }
+]

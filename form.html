@@ -5,176 +5,95 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        input,
-        textarea {
-            border: 1px solid #eeeeee;
-            box-sizing: border-box;
-            margin: 0;
-            outline: none;
-            padding: 10px;
-        }
-
-        input[type="button"] {
-            -webkit-appearance: button;
-            cursor: pointer;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-        }
-
-        .input-group {
-            clear: both;
-            margin: 15px 0;
-            position: relative;
-        }
-
-        .input-group input[type='button'] {
-            min-width: 50px;
-            width: auto;
-            transition: all 300ms ease;
-        }
-
-        .input-group .button-minus,
-        .input-group .button-plus {
-            font-weight: bold;
-            height: 38px;
-            padding: 0;
-            width: 50px;
-            position: relative;
-        }
-
-        .input-group .quantity-field {
-            position: relative;
-            height: 38px;
-            left: -6px;
-            text-align: center;
-            width: 62px;
-            display: inline-block;
-            font-size: 13px;
-            margin: 0 0 5px;
-            resize: vertical;
-        }
-
-        .button-plus {
-            left: -13px;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
-            color: #fefefe;
-            background: #4cae4c;
-        }
-
-        .button-minus{
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            color: #fefefe;
-            background: #d43f3a
-        }
-
-        input[type="number"] {
-            -moz-appearance: textfield;
-            -webkit-appearance: none;
-        }
-
-    </style>
     <script src="vue.js"></script>
 </head>
 <body>
     <div id="app">
         <!-- NAVBAR -->
         <nav class="navbar fixed-top navbar-expand-md shadow navbar-custom">
-          <div class="wrapper d-flex flex-row justify-content-between">
-            <div class="brand-wrapper">
-              <a class="navbar-brand" href="#">
-                <!-- <img class="logo" src="assets/image/logo.png"> -->
-                LOGO
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <!-- <div id="navbar-clearfix" style="width: 100%;"></div> -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Brands</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="collections.html">Products</a>
-                </li> 
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-              </form>
-            </div>
-          </div>  
-      </nav>
+            <div class="wrapper d-flex flex-row justify-content-between">
+                <div class="brand-wrapper">
+                <a class="navbar-brand" href="#">
+                    <!-- <img class="logo" src="assets/image/logo.png"> -->
+                    LOGO
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+                <!-- <div id="navbar-clearfix" style="width: 100%;"></div> -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="collections.html">Products</a>
+                    </li> 
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                </form>
+                </div>
+            </div>  
+        </nav>
 
-        <!-- BANNER -->
-        <div id="carouselExampleIndicators" class="carousel slide position-relative mt-65 mb-70" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/images/banner_brand.jpg" alt="First slide">
-              </div>
-            </div>
-        </div>
-        <div id="app">
-            <section class="position-relative mt-65">
-                <div class="wrapper p-5 bg-white">
-                    <form>
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="assets/images/asus_tuf.jpeg" style="width: 100%;"/>
+        <section class="position-relative mt-100 py-5">
+            <div class="wrapper">
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="font-weight-bold">Cart</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-5">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="assets/images/asus_tuf.jpeg" style="width: 100%;"/>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="font-weight-bold">
+                                        {{laptop.nama}}
+                                    </h3>
+                                    <h4 class="font-weight-bold">
+                                        Rp. {{formatPrice(laptop.harga)}}
+                                    </h3>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h3 class="font-weight-bold">
-                                            {{laptop.nama}}
-                                        </h3>
-                                        <h4 class="font-weight-bold">
-                                            Rp. {{formatPrice(laptop.harga)}}
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="input-group">
-                                            <div v-if="laptop.qty===1">
-                                                <input type="button" disabled value="-" @click="decreaseQty()" class="button-minus" data-field="quantity">
-                                            </div>
-                                            <div v-else="laptop.qty===1">
-                                                <input type="button" value="-" @click="decreaseQty()" class="button-minus" data-field="quantity">
-                                            </div>
-                                            <input type="number" v-model="laptop.qty" name="quantity" class="quantity-field">
-                                            <input type="button" value="+" @click="increaseQty()" class="button-plus" data-field="quantity">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <div v-if="laptop.qty===1">
+                                            <input type="button" disabled value="-" @click="decreaseQty()" class="button-minus" data-field="quantity">
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <button type="button" @click="calculatePrice()" class="btn btn-success" style="margin-top: 14px;">Proses</button>
+                                        <div v-else="laptop.qty===1">
+                                            <input type="button" value="-" @click="decreaseQty()" class="button-minus" data-field="quantity">
+                                        </div>
+                                        <input type="number" v-model="laptop.qty" name="quantity" class="quantity-field">
+                                        <input type="button" value="+" @click="increaseQty()" class="button-plus" data-field="quantity">
                                     </div>
                                 </div>
-                                <div class="row" v-if="totalBayar !== 0">
-                                    <div class="col-3">
-                                        <h5 class="font-weight-bold">Total Bayar : </h5> 
-                                    </div>
-                                    <div class="col-8">
-                                        Rp. {{formatPrice(totalBayar)}}
-                                    </div>
+                                <div class="col-6">
+                                    <button type="button" @click="calculatePrice()" class="btn btn-success" style="margin-top: 14px;">Proses</button>
+                                </div>
+                            </div>
+                            <div class="row" v-if="totalBayar !== 0">
+                                <div class="col-3">
+                                    <h5 class="font-weight-bold">Total Bayar : </h5> 
+                                </div>
+                                <div class="col-8">
+                                    Rp. {{formatPrice(totalBayar)}}
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
         
         <footer class="position-relative mt-65">
           <div class="wrapper">

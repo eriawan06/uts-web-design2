@@ -1,105 +1,33 @@
 import { AppBanner } from '../components/AppBanner.js';
 import { BannerImage } from '../components/BannerImage.js';
 import { ProductCard } from '../components/ProductCard.js';
+import { FetchDataMixin } from '../mixins/FetchDataMixin.js';
+import { FormatCurrencyMixin } from '../mixins/FormatCurrencyMixin.js';
 
 export const HomePage = {
+    mixins: [FetchDataMixin, FormatCurrencyMixin],
     components: {
         'AppBanner': AppBanner,
         'BannerImage': BannerImage,
         'ProductCard': ProductCard,
     },
-    data() {
-        return {
-            'featuredProducts': [
-                {
-                    'id': '1',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss1...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '2',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss2...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '3',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss3...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '4',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss4...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '5',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss5...',
-                    'price': 10000000,
-                },
-            ],
-            'popularProducts': [
-                {
-                    'id': '1',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss1...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '2',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss2...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '3',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss3...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '4',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss4...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '5',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss5...',
-                    'price': 10000000,
-                },
-            ],
-            'flashSaleProducts': [
-                {
-                    'id': '1',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss1...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '2',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss2...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '3',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss3...',
-                    'price': 10000000,
-                },
-                {
-                    'id': '4',
-                    'image': 'product.jpg',
-                    'name': 'Laptop HP Pavilion Gaming Laptop - 15- dxxdsxdsfdss4...',
-                    'price': 10000000,
-                }
-            ],
+    computed: {
+        featuredProducts() {
+            var products = [];
+            this.products.forEach(product => {
+                if(product.label === 'featured') products.push(product)
+            });
+            return products;
+        },
+        popularProducts() {
+            var products = [];
+            this.products.forEach(product => {
+                if(product.label === 'popular') products.push(product)
+            });
+            return products;
+        },
+        flashSaleProducts() {
+            return this.products.slice(0,4);
         }
     },
     template: `
@@ -178,7 +106,7 @@ export const HomePage = {
                     <a href="#">See all products</a>
                 </div>
                 <div class="row">
-                    <div class="col" v-for="product in featuredProducts">
+                    <div class="col" v-for="product in popularProducts">
                         <product-card :productid="product.id" :img="product.image" :title="product.name"
                             :price="product.price">
                         </product-card>

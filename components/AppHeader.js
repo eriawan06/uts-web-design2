@@ -1,17 +1,14 @@
+import { NavigationMixin } from "../mixins/NavigationMixin.js";
+
 export const AppHeader = {
-  name: 'AppHeader',
+  mixins: [NavigationMixin],
   data() {
-      return {
-          navLinks: {
-              '/': 'Home',
-              '/brands': 'Brands',
-              '/products': 'Products'
-          }
+    return {
+      navLinks: {
+          '/': 'Home',
+          '/brand': 'Brand',
+          '/products': 'Products'
       }
-  },
-  methods: {
-    goToPage(route) {
-      this.$emit('update-route', route);
     }
   },
   template: `
