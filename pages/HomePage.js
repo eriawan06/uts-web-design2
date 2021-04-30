@@ -67,7 +67,7 @@ export const HomePage = {
                 </div>
                 <div class="row">
                     <div class="col" v-for="product in featuredProducts">
-                        <product-card :productid="product.id" :img="product.image" :title="product.name"
+                        <product-card :productid="product.id" @update-id-product="updateIdProduct" :img="product.image" :title="product.name"
                             :price="product.price">
                         </product-card>
                     </div>
@@ -84,7 +84,7 @@ export const HomePage = {
                         <h5>00 : 00 : 00</h5>
                     </div>
                     <div class="col" v-for="product in flashSaleProducts">
-                        <product-card :productid="product.id" :img="product.image" :title="product.name"
+                        <product-card @update-id-product="updateIdProduct" :productid="product.id" :img="product.image" :title="product.name"
                             :price="product.price">
                         </product-card>
                     </div>
@@ -100,7 +100,7 @@ export const HomePage = {
                 </div>
                 <div class="row">
                     <div class="col" v-for="product in popularProducts">
-                        <product-card :productid="product.id" :img="product.image" :title="product.name"
+                        <product-card @update-id-product="updateIdProduct" :productid="product.id" :img="product.image" :title="product.name"
                             :price="product.price">
                         </product-card>
                     </div>
