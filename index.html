@@ -12,11 +12,11 @@
       <app-header @update-route="updateCurrentRoute"></app-header>
 
       <home-page v-if="currenRoute=='/'" 
-        @update-route="updateCurrentRoute"
-        @update-cart="cartList">
+        @update-route="updateCurrentRoute">
       </home-page>
       <brand-page v-else-if="currenRoute=='/brand'"></brand-page>
-      <products-page v-else-if="currenRoute=='/products'"></products-page>
+      <products-page v-else-if="currenRoute=='/products'" @update-route="updateCurrentRoute" @update-id-product="updateCurrentIdProduct"></products-page>
+      <payment-page v-else-if="currenRoute=='/buy'" v-bind:idproduct="idProduct"></payment-page>
 
       <app-footer @update-route="updateCurrentRoute"></app-footer>
     </div>
@@ -35,6 +35,7 @@
       import { HomePage } from './pages/HomePage.js';
       import { ProductsPage } from './pages/ProductsPage.js';
       import { BrandPage } from './pages/BrandPage.js';
+      import { PaymentPage } from './pages/PaymentPage.js';
 
       var vm = new Vue({
         el: '#app',
@@ -44,14 +45,19 @@
           'HomePage': HomePage,
           'ProductsPage': ProductsPage,
           'BrandPage': BrandPage,
+          'PaymentPage': PaymentPage,
         },
         data: {
-          currenRoute: window.location.pathname,
-          cartList: [],
+          currenRoute: '/',
+          idProduct:null,
         },
         methods: {
           updateCurrentRoute(route){
             this.currenRoute = route;
+          },
+          updateCurrentIdProduct(id){
+            console.log('index',id)
+            this.idProduct = id;
           }
         },
       });
