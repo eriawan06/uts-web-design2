@@ -11,7 +11,7 @@
       <!-- NAVBAR -->
       <app-header @update-route="updateCurrentRoute"></app-header>
 
-      <home-page v-if="currenRoute=='/'"></home-page>
+      <home-page v-if="currenRoute=='/'" @update-route="updateCurrentRoute"></home-page>
       <brand-page v-else-if="currenRoute=='/brand'"></brand-page>
       <products-page v-else-if="currenRoute=='/products'"></products-page>
 

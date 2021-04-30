@@ -3,9 +3,10 @@ import { BannerImage } from '../components/BannerImage.js';
 import { ProductCard } from '../components/ProductCard.js';
 import { FetchDataMixin } from '../mixins/FetchDataMixin.js';
 import { FormatCurrencyMixin } from '../mixins/FormatCurrencyMixin.js';
+import { NavigationMixin } from '../mixins/NavigationMixin.js';
 
 export const HomePage = {
-    mixins: [FetchDataMixin, FormatCurrencyMixin],
+    mixins: [FetchDataMixin, FormatCurrencyMixin, NavigationMixin],
     components: {
         'AppBanner': AppBanner,
         'BannerImage': BannerImage,
@@ -13,18 +14,10 @@ export const HomePage = {
     },
     computed: {
         featuredProducts() {
-            var products = [];
-            this.products.forEach(product => {
-                if(product.label === 'featured') products.push(product)
-            });
-            return products;
+            return this.products.filter(product => product.label === 'featured');
         },
         popularProducts() {
-            var products = [];
-            this.products.forEach(product => {
-                if(product.label === 'popular') products.push(product)
-            });
-            return products;
+            return this.products.filter(product => product.label === 'popular');
         },
         flashSaleProducts() {
             return this.products.slice(0,4);
@@ -43,22 +36,22 @@ export const HomePage = {
             <div class="wrapper">
                 <div class="row">
                     <div class="col-lg-3 text-center">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-3">
+                        <img src="assets/images/trusted.png" alt="trusted" class="mb-3">
                         <h5 class="font-weight-bold">Trusted</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-3">
+                        <img src="assets/images/trusted.png" alt="trusted" class="mb-3">
                         <h5 class="font-weight-bold">Trusted</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-3">
+                        <img src="assets/images/trusted.png" alt="trusted" class="mb-3">
                         <h5 class="font-weight-bold">Trusted</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="col-lg-3 text-center">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-3">
+                        <img src="assets/images/trusted.png" alt="trusted" class="mb-3">
                         <h5 class="font-weight-bold">Trusted</h5>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
@@ -70,7 +63,7 @@ export const HomePage = {
             <div class="wrapper">
                 <div class="section-title mb-4">
                     <h5 class="font-weight-bold">Featured Products</h5>
-                    <a href="#">See all products</a>
+                    <a href="#" @click="goToPage('/products')">See all products</a>
                 </div>
                 <div class="row">
                     <div class="col" v-for="product in featuredProducts">
@@ -103,7 +96,7 @@ export const HomePage = {
             <div class="wrapper">
                 <div class="section-title mb-4">
                     <h5 class="font-weight-bold">Popular Products</h5>
-                    <a href="#">See all products</a>
+                    <a href="#" @click="goToPage('/products')">See all products</a>
                 </div>
                 <div class="row">
                     <div class="col" v-for="product in popularProducts">
@@ -124,20 +117,20 @@ export const HomePage = {
                 </div>
                 <div class="row">
                     <div class="col-lg-4 text-center pl-4 pr-4">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-4">
-                        <h5 class="font-weight-bold">Jhon Doe</h5>
+                        <img src="assets/images/john.jpg" alt="trusted" class="mb-4">
+                        <h5 class="font-weight-bold">John Doe</h5>
                         <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                             the industry's standard dummy text</p>
                     </div>
                     <div class="col-lg-4 text-center pl-4 pr-4">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-4">
-                        <h5 class="font-weight-bold">Jhon Doe</h5>
+                        <img src="assets/images/jay.jpg" alt="trusted" class="mb-4">
+                        <h5 class="font-weight-bold">Jay Doe</h5>
                         <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                             the industry's standard dummy text</p>
                     </div>
                     <div class="col-lg-4 text-center pl-4 pr-4">
-                        <img src="assets/images/product.jpg" alt="trusted" class="mb-4">
-                        <h5 class="font-weight-bold">Jhon Doe</h5>
+                        <img src="assets/images/jane.jpg" alt="trusted" class="mb-4">
+                        <h5 class="font-weight-bold">Jane Doe</h5>
                         <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                             the industry's standard dummy text</p>
                     </div>

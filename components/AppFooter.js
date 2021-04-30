@@ -36,7 +36,7 @@ export const AppFooter = {
                 <div class="col-lg-2 pl-4 pr-4" v-for="(value,key) in footerLinks">
                     <h5 class="font-weight-bold mb-3">{{key}}</h5>
                     <template v-for="(linkName, linkRef) in value">
-                        <a @click="goToPage(linkRef)" v-if="key=='Quick Links'">{{linkName}}</a>
+                        <a href="#" @click="goToPage(linkRef)" v-if="key=='Quick Links'">{{linkName}}</a>
                         <a :href="linkRef" v-else>{{linkName}}</a>
                     </template>
                 </div>

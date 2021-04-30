@@ -1,6 +1,6 @@
 export const AppBanner = {
     template: `
-    <div id="carouselExampleIndicators" class="carousel slide position-relative mt-65 mb-70" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide position-relative mt-60 mb-70" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
