@@ -12,10 +12,13 @@
       <app-header @update-route="updateCurrentRoute"></app-header>
 
       <home-page v-if="currenRoute=='/'" 
-        @update-route="updateCurrentRoute">
+        @update-route="updateCurrentRoute"
+        @update-id-product="updateCurrentIdProduct">
       </home-page>
       <brand-page v-else-if="currenRoute=='/brand'"></brand-page>
-      <products-page v-else-if="currenRoute=='/products'" @update-route="updateCurrentRoute" @update-id-product="updateCurrentIdProduct"></products-page>
+      <products-page v-else-if="currenRoute=='/products'" 
+      @update-route="updateCurrentRoute" 
+      @update-id-product="updateCurrentIdProduct"></products-page>
       <payment-page v-else-if="currenRoute=='/buy'" v-bind:idproduct="idProduct"></payment-page>
 
       <app-footer @update-route="updateCurrentRoute"></app-footer>
