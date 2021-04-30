@@ -1,9 +1,10 @@
 import { ProductCard } from "../components/ProductCard.js";
 import { FetchDataMixin } from "../mixins/FetchDataMixin.js";
 import { FormatCurrencyMixin } from "../mixins/FormatCurrencyMixin.js";
+import { NavigationMixin } from "../mixins/NavigationMixin.js";
 
 export const ProductsPage = {
-    mixins: [FetchDataMixin, FormatCurrencyMixin],
+    mixins: [FetchDataMixin, FormatCurrencyMixin,NavigationMixin],
     components: {
         'ProductCard': ProductCard,
     },
@@ -144,7 +145,7 @@ export const ProductsPage = {
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-lg-4 mb-5" v-for="product in filteredProducts">
-                        <product-card :productid="product.id" :img="product.image" :title="product.name"
+                        <product-card @update-route="updateCurrRoute" @update-id-product="updateIdProduct" :productid="product.id" :img="product.image" :title="product.name"
                             :price="product.price">
                         </product-card>
                     </div>

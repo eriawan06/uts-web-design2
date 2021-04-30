@@ -15,10 +15,11 @@ export const ProductCard = {
             <p class="card-text">{{title}}</p>
             <h5 class="card-title font-weight-bold">{{formatCurrency(price)}}</h5>
             <div class="text-center">
-                <a :href="'/buy?productid='+productid" class="btn btn-primary"
-                    @click="updateCart(productid)">Buy</a>
+                <a  class="btn btn-primary"
+                    @click="updateIdProduct(productid)">Buy</a>
             </div>
         </div>
     </div>
     `,
 }
+// :href="'/buy?productid='+productid"
