@@ -12,7 +12,7 @@ export const ProductCard = {
             <p class="card-text">{{title}}</p>
             <h5 class="card-title font-weight-bold">{{formatCurrency(price)}}</h5>
             <div class="text-center">
-                <a :href="'/buy?productid='+productid" class="btn btn-primary">Buy</a>
+                <a :href="'/form.html?productid='+productid" class="btn btn-primary">Buy</a>
             </div>
         </div>
     </div>
