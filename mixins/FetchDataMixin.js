@@ -20,6 +20,11 @@ export const FetchDataMixin = {
                 }
             }
             rawFile.send(null);
+        },
+        updateCart(productId) {
+            var product = this.products.filter(item => item.id === productId);
+            console.log(product);
+            this.$emit('update-cart', product);
         }
     },
 }

@@ -1,7 +1,9 @@
-import {FormatCurrencyMixin} from '../mixins/FormatCurrencyMixin.js';
+import { FetchDataMixin } from '../mixins/FetchDataMixin.js';
+import { FormatCurrencyMixin } from '../mixins/FormatCurrencyMixin.js';
+
 
 export const ProductCard = {
-    mixins: [FormatCurrencyMixin],
+    mixins: [FormatCurrencyMixin, FetchDataMixin, NavigationMixin],
     props: ['productid','img','alt','title','price'],
     template: `
     <div class="card h-100">
@@ -12,7 +14,8 @@ export const ProductCard = {
             <p class="card-text">{{title}}</p>
             <h5 class="card-title font-weight-bold">{{formatCurrency(price)}}</h5>
             <div class="text-center">
-                <a :href="'/buy?productid='+productid" class="btn btn-primary">Buy</a>
+                <a :href="'/buy?productid='+productid" class="btn btn-primary"
+                    @click="updateCart(productid)">Buy</a>
             </div>
         </div>
     </div>

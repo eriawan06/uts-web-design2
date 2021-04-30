@@ -11,7 +11,10 @@
       <!-- NAVBAR -->
       <app-header @update-route="updateCurrentRoute"></app-header>
 
-      <home-page v-if="currenRoute=='/'" @update-route="updateCurrentRoute"></home-page>
+      <home-page v-if="currenRoute=='/'" 
+        @update-route="updateCurrentRoute"
+        @update-cart="cartList">
+      </home-page>
       <brand-page v-else-if="currenRoute=='/brand'"></brand-page>
       <products-page v-else-if="currenRoute=='/products'"></products-page>
 
@@ -43,7 +46,8 @@
           'BrandPage': BrandPage,
         },
         data: {
-          currenRoute: window.location.pathname
+          currenRoute: window.location.pathname,
+          cartList: [],
         },
         methods: {
           updateCurrentRoute(route){
